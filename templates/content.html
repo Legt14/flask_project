@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block title%}
+    {{ super() }}
+    Hello
+{% endblock %}
+
+{% block content%}
+    {%if username%}
+        {% for messages in get_flashed_messages() %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{messages}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
+

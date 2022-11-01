@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block title%}
+    {{super()}}
+    404
+{% endblock %}
+
+{% block content%}
+    <div class="error">
+        <img src="{{url_for('static', filename='img/404.svg')}}" alt="Error 404" >
+        <h2>404 Error</h2>
+    </div>
+{% endblock %}

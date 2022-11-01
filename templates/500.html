@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block title%}
+    {{super()}}
+    500
+{% endblock %}
+
+{% block content%}
+    <div class="error">
+        <img src="{{url_for('static', filename='img/500.svg')}}" alt="Internal Server Error" class="e404">
+        <h3>500 Internal Server Error</h3>
+    </div>
+{% endblock %}
